@@ -1,0 +1,770 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 9,
+  "links": [],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 5,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "COUNT(bamboo_finished_build_count{planKey=~\"MB.*\",planKey!~\"MB-BE1.*\",planKey!~\"MB-BE2.*\",planKey!~\"MB-BEL0.*\",planKey!~\"MB-BEL1.*\",planKey!~\"MB-BL1.*\",planKey!~\"MB-BL2.*\",planKey!~\"MB-BDT1\", planKey!~\"MB-CD2.*\", planKey!~\"MB-CD3.*\", planKey!~\"MB-CL0.*\", planKey!~\"MB-CL1.*\", planKey!~\"MB-FRAM8.*\", planKey!~\"MB-FRAM9.*\", planKey!~\"MB-IA0.*\", planKey!~\"MB-IA1.*\", planKey!~\"MB-N3WB2.*\", planKey!~\"MB-N6WB2.*\", planKey!~\"MB-NBOL7.*\", planKey!~\"MB-NBOL8.*\", planKey!~\"MB-NBU2.*\", planKey!~\"MB-NDB2.*\", planKey!~\"MB-PAYM1.*\", planKey!~\"MB-PAYM7.*\", planKey!~\"MB-PD0.*\", planKey!~\"MB-PD13.*\", planKey!~\"MB-REST2.*\", planKey!~\"MB-REST3.*\", planKey!~\"MB-RG2.*\", planKey!~\"MB-RG3.*\", planKey!~\"MB-SA2.*\", planKey!~\"MB-SA3.*\", planKey!~\"MB-SL0.*\", planKey!~\"MB-SL1.*\", planKey!~\"MB-SM8.*\", planKey!~\"MB-SM9.*\", planKey!~\"MB-SNS0.*\", planKey!~\"MB-SNS1.*\", planKey!~\"MB-SPP0.*\", planKey!~\"MB-SPP1.*\", planKey!~\"MB-STDA2.*\", planKey!~\"MB-STDA3.*\", planKey!~\"MB-TCM1.*\", planKey!~\"MB-TCM8.*\", planKey!~\"MB-TCP0.*\", planKey!~\"MB-TCP2.*\", planKey!~\"MB-TPP1.*\", planKey!~\"MB-TPP2.*\", planKey!~\"MB-WFG0.*\", planKey!~\"MB-WFG1.*\",state=\"SUCCESS\"})",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Success finished_build",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 4,
+        "y": 0
+      },
+      "id": 8,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(bamboo_finished_build_count{planKey=~\"MB.*\",planKey!~\"MB-BE1.*\",planKey!~\"MB-BE2.*\",planKey!~\"MB-BEL0.*\",planKey!~\"MB-BEL1.*\",planKey!~\"MB-BL1.*\",planKey!~\"MB-BL2.*\",planKey!~\"MB-BDT1\", planKey!~\"MB-CD2.*\", planKey!~\"MB-CD3.*\", planKey!~\"MB-CL0.*\", planKey!~\"MB-CL1.*\", planKey!~\"MB-FRAM8.*\", planKey!~\"MB-FRAM9.*\", planKey!~\"MB-IA0.*\", planKey!~\"MB-IA1.*\", planKey!~\"MB-N3WB2.*\", planKey!~\"MB-N6WB2.*\", planKey!~\"MB-NBOL7.*\", planKey!~\"MB-NBOL8.*\", planKey!~\"MB-NBU2.*\", planKey!~\"MB-NDB2.*\", planKey!~\"MB-PAYM1.*\", planKey!~\"MB-PAYM7.*\", planKey!~\"MB-PD0.*\", planKey!~\"MB-PD13.*\", planKey!~\"MB-REST2.*\", planKey!~\"MB-REST3.*\", planKey!~\"MB-RG2.*\", planKey!~\"MB-RG3.*\", planKey!~\"MB-SA2.*\", planKey!~\"MB-SA3.*\", planKey!~\"MB-SL0.*\", planKey!~\"MB-SL1.*\", planKey!~\"MB-SM8.*\", planKey!~\"MB-SM9.*\", planKey!~\"MB-SNS0.*\", planKey!~\"MB-SNS1.*\", planKey!~\"MB-SPP0.*\", planKey!~\"MB-SPP1.*\", planKey!~\"MB-STDA2.*\", planKey!~\"MB-STDA3.*\", planKey!~\"MB-TCM1.*\", planKey!~\"MB-TCM8.*\", planKey!~\"MB-TCP0.*\", planKey!~\"MB-TCP2.*\", planKey!~\"MB-TPP1.*\", planKey!~\"MB-TPP2.*\", planKey!~\"MB-WFG0.*\", planKey!~\"MB-WFG1.*\",state=\"FAILED\"})",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Failed finished_build",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 8,
+        "y": 0
+      },
+      "id": 7,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(bamboo_canceled_build_count)",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "Bamboo Canceled Build Count",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 3,
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 3,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(bamboo_finished_build_count{planKey=~\"MB.*\",planKey!~\"MB-BE1.*\",planKey!~\"MB-BE2.*\",planKey!~\"MB-BEL0.*\",planKey!~\"MB-BEL1.*\",planKey!~\"MB-BL1.*\",planKey!~\"MB-BL2.*\",planKey!~\"MB-BDT1\", planKey!~\"MB-CD2.*\", planKey!~\"MB-CD3.*\", planKey!~\"MB-CL0.*\", planKey!~\"MB-CL1.*\", planKey!~\"MB-FRAM8.*\", planKey!~\"MB-FRAM9.*\", planKey!~\"MB-IA0.*\", planKey!~\"MB-IA1.*\", planKey!~\"MB-N3WB2.*\", planKey!~\"MB-N6WB2.*\", planKey!~\"MB-NBOL7.*\", planKey!~\"MB-NBOL8.*\", planKey!~\"MB-NBU2.*\", planKey!~\"MB-NDB2.*\", planKey!~\"MB-PAYM1.*\", planKey!~\"MB-PAYM7.*\", planKey!~\"MB-PD0.*\", planKey!~\"MB-PD13.*\", planKey!~\"MB-REST2.*\", planKey!~\"MB-REST3.*\", planKey!~\"MB-RG2.*\", planKey!~\"MB-RG3.*\", planKey!~\"MB-SA2.*\", planKey!~\"MB-SA3.*\", planKey!~\"MB-SL0.*\", planKey!~\"MB-SL1.*\", planKey!~\"MB-SM8.*\", planKey!~\"MB-SM9.*\", planKey!~\"MB-SNS0.*\", planKey!~\"MB-SNS1.*\", planKey!~\"MB-SPP0.*\", planKey!~\"MB-SPP1.*\", planKey!~\"MB-STDA2.*\", planKey!~\"MB-STDA3.*\", planKey!~\"MB-TCM1.*\", planKey!~\"MB-TCM8.*\", planKey!~\"MB-TCP0.*\", planKey!~\"MB-TCP2.*\", planKey!~\"MB-TPP1.*\", planKey!~\"MB-TPP2.*\", planKey!~\"MB-WFG0.*\", planKey!~\"MB-WFG1.*\",state=\"FAILED\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{planKey}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Master Build Failed",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "MB-PAYM-JOB1 FAILED": "#bf1b00",
+        "MB-PAYM-JOB1 SUCCESS": "#508642"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 3,
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 0,
+        "y": 5
+      },
+      "id": 9,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(bamboo_finished_build_count{planKey=~\"MB-PAYM.*\",planKey!~\"MB-PAYM1.*\",planKey!~\"MB-PAYM7.*\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "PAYMENT-{{state}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Payment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "MB-NBOL-JOB1 FAILED": "#e24d42",
+        "MB-NBOL-JOB1 SUCCESS": "#629e51",
+        "MB-PAYM-JOB1 FAILED": "#bf1b00",
+        "MB-PAYM-JOB1 SUCCESS": "#508642"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 3,
+      "gridPos": {
+        "h": 6,
+        "w": 7,
+        "x": 8,
+        "y": 5
+      },
+      "id": 11,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(bamboo_finished_build_count{planKey=~\"MB-NBOL.*\",planKey!~\"MB-NBOL7.*\",planKey!~\"MB-NBOL8.*\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "NBOL- {{state}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Nbol",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "MB-PAYM-JOB1 FAILED": "#bf1b00",
+        "MB-PAYM-JOB1 SUCCESS": "#508642"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 3,
+      "gridPos": {
+        "h": 6,
+        "w": 9,
+        "x": 15,
+        "y": 5
+      },
+      "id": 10,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(bamboo_finished_build_count{planKey=~\"MB-SM.*\",planKey!~\"MB-SM8.*\",planKey!~\"MB-SM9.*\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "STATEMENT- {{state}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Statement",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "fill": 3,
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(bamboo_finished_build_count{planKey=~\"MB.*\",planKey!~\"MB-BE1.*\",planKey!~\"MB-BE2.*\",planKey!~\"MB-BEL0.*\",planKey!~\"MB-BEL1.*\",planKey!~\"MB-BL1.*\",planKey!~\"MB-BL2.*\",planKey!~\"MB-BDT1\", planKey!~\"MB-CD2.*\", planKey!~\"MB-CD3.*\", planKey!~\"MB-CL0.*\", planKey!~\"MB-CL1.*\", planKey!~\"MB-FRAM8.*\", planKey!~\"MB-FRAM9.*\", planKey!~\"MB-IA0.*\", planKey!~\"MB-IA1.*\", planKey!~\"MB-N3WB2.*\", planKey!~\"MB-N6WB2.*\", planKey!~\"MB-NBOL7.*\", planKey!~\"MB-NBOL8.*\", planKey!~\"MB-NBU2.*\", planKey!~\"MB-NDB2.*\", planKey!~\"MB-PAYM1.*\", planKey!~\"MB-PAYM7.*\", planKey!~\"MB-PD0.*\", planKey!~\"MB-PD13.*\", planKey!~\"MB-REST2.*\", planKey!~\"MB-REST3.*\", planKey!~\"MB-RG2.*\", planKey!~\"MB-RG3.*\", planKey!~\"MB-SA2.*\", planKey!~\"MB-SA3.*\", planKey!~\"MB-SL0.*\", planKey!~\"MB-SL1.*\", planKey!~\"MB-SM8.*\", planKey!~\"MB-SM9.*\", planKey!~\"MB-SNS0.*\", planKey!~\"MB-SNS1.*\", planKey!~\"MB-SPP0.*\", planKey!~\"MB-SPP1.*\", planKey!~\"MB-STDA2.*\", planKey!~\"MB-STDA3.*\", planKey!~\"MB-TCM1.*\", planKey!~\"MB-TCM8.*\", planKey!~\"MB-TCP0.*\", planKey!~\"MB-TCP2.*\", planKey!~\"MB-TPP1.*\", planKey!~\"MB-TPP2.*\", planKey!~\"MB-WFG0.*\", planKey!~\"MB-WFG1.*\",state=\"SUCCESS\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{planKey}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Master All Build Success",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 16,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Master Build",
+  "uid": "vjO6K5Cmz",
+  "version": 16
+}
